@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map.Entry;
 
 public class HashMapCalculator {
 	public static void main(String[] args) {
@@ -7,9 +8,9 @@ public class HashMapCalculator {
 
 	public int commonKeyValuePairs(HashMap<String, String> hashmap1, HashMap<String, String> hashmap2) {
 		int value = 0;
-		for (String map : hashmap1.keySet()) {
-			if (hashmap2.containsKey(map)) {
-				if (hashmap1.get(hashmap1.keySet())) {
+		for (Entry<String, String> map : hashmap1.entrySet()) {
+			if (hashmap2.containsKey(map.getKey())) {
+				if (hashmap2.containsValue(map.getValue())) {
 					value += 1;
 				}
 			}
